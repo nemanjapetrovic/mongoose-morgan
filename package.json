@@ -1,0 +1,22 @@
+{
+  "name": "mongoose-morgan",
+  "version": "1.0.0",
+  "description": "Used to log morgan stream data into MongoDb database.",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "~4.11.9",
+    "morgan": "~1.8.2",
+    "stream": "0.0.2",
+    "carrier": "0.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nemanjapetrovic/mongoose-morgan.git"
+  },
+  "author": "Nemanja Petrovic",
+  "license": "MIT",
+  "homepage": "https://github.com/nemanjapetrovic/mongoose-morgan.git"
+}
