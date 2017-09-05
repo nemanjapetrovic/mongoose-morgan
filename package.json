@@ -1,6 +1,6 @@
 {
   "name": "mongoose-morgan",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Used to log morgan stream data into MongoDb database.",
   "main": "index.js",
   "dependencies": {

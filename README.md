@@ -1,6 +1,6 @@
 # [mongoose-morgan](https://www.npmjs.com/package/mongoose-morgan) logger
 
-Is an npm package which is combining [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages and adding additional functionality to log morgan data into MongoDB.
+Is an npm package which is combining [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages by adding an additional functionality to log morgan data into MongoDB.
 
 # Install
 
