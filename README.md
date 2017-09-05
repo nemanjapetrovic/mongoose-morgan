@@ -1,6 +1,6 @@
 # [mongoose-morgan](https://www.npmjs.com/package/mongoose-morgan) logger
 
-Is an npm package which is combining [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages and adding aditional functinality to log morgan data into MongoDb.
+Is an npm package which is combining [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages and adding additional functionality to log morgan data into MongoDB.
 
 # Install
 
@@ -35,7 +35,7 @@ console.log('works... ' + port);
 
 The example from the above will create inside `logs-db` database collection called `logs` and will store data inside it.
 
-# Detaild usage
+# Detailed usage
 
 [mongoose-morgan](https://www.npmjs.com/package/mongoose-morgan) is accepting three parameters:
 
@@ -61,7 +61,7 @@ app.use(morgan({
 ));
 ```
 
-The code above will log only data in `dev` format and will skip all logs if the response status code is less then 400. Data will be stored in `logs-db` database in `error-logger` collection.
+The code above will log only data in `dev` format and will skip all logs if the response status code is less than 400. Data will be stored in `logs-db` database in `error-logger` collection.
 
 # [Contribution](https://github.com/nemanjapetrovic/dev-env-setup/blob/master/CONTRIBUTING.md)
 
