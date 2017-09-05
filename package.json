@@ -9,14 +9,27 @@
     "stream": "0.0.2",
     "carrier": "0.3.0"
   },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "keywords": [
+    "morgan",
+    "log",
+    "logger",
+    "mongo",
+    "mongodb",
+    "error",
+    "express",
+    "http"
+  ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nemanjapetrovic/mongoose-morgan.git"
+    "url": "git@github.com/nemanjapetrovic/mongoose-morgan.git"
   },
-  "author": "Nemanja Petrovic",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "bugs": {
+    "url": "https://github.com/nemanjapetrovic/mongoose-morgan/issues"
+  },
+  "author": "Nemanja Petrovic <nemanjapetrovic1794@gmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/nemanjapetrovic/mongoose-morgan.git"
+  "homepage": "https://github.com/nemanjapetrovic/mongoose-morgan/"
 }
