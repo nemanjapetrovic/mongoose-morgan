@@ -43,25 +43,34 @@ The example from the above will create inside `logs-db` database collection call
 - options : object type - [standrad morgan options](https://github.com/expressjs/morgan#options)
 - format : string type - [standrad mrogan format](https://github.com/expressjs/morgan#predefined-formats)
 
-Example:
+Example without morgan options:
+
+```
+app.use(morgan({    
+    connectionString: 'mongodb://localhost:27017/logs-db' 
+   }, {}, 'short'
+));
+```
+
+Full example:
 
 ```
 app.use(morgan({
-    collection: 'error-logger'
+    collection: 'error_logger',
     connectionString: 'mongodb://localhost:27017/logs-db',
     user: 'admin',
     pass: 'test12345'
    },
    {
     skip: function (req, res) {
-        return res.statusCode < 400
+        return res.statusCode < 400;
     }
    },
    'dev'
 ));
 ```
 
-The code above will log only data in `dev` format and will skip all logs if the response status code is less than 400. Data will be stored in `logs-db` database in `error-logger` collection.
+The code above will log only data in `dev` format and will skip all the logs if the response status code is less than 400. Data will be stored in `logs-db` database in `error_logger` collection.
 
 # [Contribution](https://github.com/nemanjapetrovic/dev-env-setup/blob/master/CONTRIBUTING.md)
 

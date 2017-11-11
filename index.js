@@ -14,25 +14,26 @@ var logSchema = mongoose.Schema({
     log: String
 });
 
-/*
- * mongoData : object
- * options : object
- * format : string, default is combined, optional argument
+/**
+ * MongooseMorgan object
+ * @param  {object} mongoData - represents mongo database data, requires { connectionString : '{MONGO_URL}' } parameter.
+ * @param  {object} options - represents morgan options, check their github, default value is empty object {}.
+ * @param  {string} format - represents morgan formatting, check their github, default value is 'combined'.
  */
 function MongooseMorgan(mongoData, options, format) {
-    // Filter the argurments
+    // Filter the arguments
     var args = Array.prototype.slice.call(arguments);
 
     if (args.length == 0 || !mongoData.connectionString) {
-        throw new Error('Mongo connection string is null or empty.');
+        throw new Error('Mongo connection string is null or empty. Try by adding this: { connectionString : \'{mongo_url}\'}');
     }
 
     if (args.length > 1 && typeof options !== 'object') {
-        throw new Error('Options parameter needs to be an object.');
+        throw new Error('Options parameter needs to be an object. You can specify empty object like {}.');
     }
 
     if (args.length > 2 && typeof format === 'object') {
-        throw new Error('Format parameter should be a string.');
+        throw new Error('Format parameter should be a string. Default parameter is \'combined\'.');
     }
 
     options = options || {};
