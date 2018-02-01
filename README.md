@@ -1,5 +1,7 @@
 # [mongoose-morgan](https://www.npmjs.com/package/mongoose-morgan) logger
-
+                
+[![Known Vulnerabilities](https://snyk.io/test/github/nemanjapetrovic/mongoose-morgan/badge.svg?targetFile=package.json)](https://snyk.io/test/github/nemanjapetrovic/mongoose-morgan?targetFile=package.json)
+              
 Is an npm package which is combining [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages by adding an additional functionality to log morgan data into MongoDB.
 
 # Install
