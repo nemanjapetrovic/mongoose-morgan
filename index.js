@@ -45,7 +45,8 @@ function MongooseMorgan(mongoData, options, format) {
     var pass = mongoData.pass || null;
     mongoose.connect(mongoData.connectionString, {
         user: user,
-        pass: pass
+        pass: pass,
+        useNewUrlParser: true
     });
 
     // Create stream for morgan to write
@@ -70,6 +71,7 @@ function MongooseMorgan(mongoData, options, format) {
             }
         });
     }
+
     return morgan(format, options);
 }
 
