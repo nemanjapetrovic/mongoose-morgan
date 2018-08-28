@@ -5,15 +5,6 @@ var carrier = require('carrier')
 
 var PassThroughStream = stream.PassThrough
 
-// Schema
-var logSchema = mongoose.Schema({
-    date: {
-        type: Date,
-        default: Date.now
-    },
-    log: String
-});
-
 /**
  * MongooseMorgan object
  * @param  {object} mongoData - represents mongo database data, requires { connectionString : '{MONGO_URL}' } parameter.
@@ -43,6 +34,10 @@ function MongooseMorgan(mongoData, options, format) {
     var collection = mongoData.collection || 'logs';
     var user = mongoData.user || null;
     var pass = mongoData.pass || null;
+    var capped = mongoData.capped;
+    var cappedSize = (mongoData.cappedSize || 10000000);
+    var cappedMax = mongoData.cappedMax;
+
     mongoose.connect(mongoData.connectionString, {
         user: user,
         pass: pass,
@@ -58,6 +53,15 @@ function MongooseMorgan(mongoData, options, format) {
     // Morgan options stream
     options.stream = stream;
 
+    // Schema
+    var logSchema = mongoose.Schema({
+        date: {
+            type: Date,
+            default: Date.now
+        },
+        log: String
+    }, capped ? { capped: { size: cappedSize, max: cappedMax } } : {} );
+    
     // Create mongoose model
     var Log = mongoose.model('Log', logSchema, collection);
 
