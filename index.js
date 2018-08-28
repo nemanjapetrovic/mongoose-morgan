@@ -1,9 +1,10 @@
-var mongoose = require('mongoose');
-var morgan = require('morgan');
-var stream = require('stream')
-var carrier = require('carrier')
+const mongoose = require('mongoose');
+const morgan = require('morgan');
+const stream = require('stream');
+const carrier = require('carrier');
+const passStream = new stream.PassThrough();
 
-var PassThroughStream = stream.PassThrough
+let logSchema;
 
 /**
  * MongooseMorgan object
@@ -32,40 +33,44 @@ function MongooseMorgan(mongoData, options, format) {
 
     // Create connection to MongoDb
     var collection = mongoData.collection || 'logs';
-    var user = mongoData.user || null;
-    var pass = mongoData.pass || null;
     var capped = mongoData.capped;
     var cappedSize = (mongoData.cappedSize || 10000000);
     var cappedMax = mongoData.cappedMax;
 
     mongoose.connect(mongoData.connectionString, {
-        user: user,
-        pass: pass,
+        user: mongoData.user || null,
+        pass: mongoData.pass || null,
         useNewUrlParser: true
     });
 
-    // Create stream for morgan to write
-    var stream = new PassThroughStream();
     // Create stream to read from
-    var lineStream = carrier.carry(stream);
+    var lineStream = carrier.carry(passStream);
     lineStream.on('line', onLine);
 
     // Morgan options stream
-    options.stream = stream;
+    options.stream = passStream;
 
-    // Schema
-    var logSchema = mongoose.Schema({
-        date: {
-            type: Date,
-            default: Date.now
-        },
-        log: String
-    }, capped ? { capped: { size: cappedSize, max: cappedMax } } : {} );
-    
+    // Schema - only once created.
+    if (!logSchema) {
+        logSchema = mongoose.Schema({
+            date: {
+                type: Date,
+                default: Date.now
+            },
+            log: String
+        }, capped ? {
+            capped: {
+                size: cappedSize,
+                max: cappedMax
+            }
+        } : {});
+    }
+
     // Create mongoose model
     var Log = mongoose.model('Log', logSchema, collection);
 
     function onLine(line) {
+        console.log(line);
         var logModel = new Log();
         logModel.log = line;
 

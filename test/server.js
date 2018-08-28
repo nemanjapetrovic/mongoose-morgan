@@ -3,7 +3,6 @@ const app = express();
 
 const mongooseMorgan = require('./../index');
 
-
 function MakeServer() {
     app.get('/ok', (req, res) => {
         res.status(200);
@@ -18,7 +17,7 @@ function MakeServer() {
     // Logger
     app.use(mongooseMorgan({
         connectionString: 'mongodb://localhost:27017/MongooseMorganUnit'
-    }, {}, 'dev'));
+    }, {}, 'short'));
 
     var server = app.listen(3000, () => {
         var port = server.address().port;

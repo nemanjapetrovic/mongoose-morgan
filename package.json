@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "carrier": "0.3.0",
-    "mongoose": "^5.2.6",
+    "mongoose": "^5.2.10",
     "morgan": "^1.9.0",
     "stream": "0.0.2"
   },
@@ -28,7 +28,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">= 0.10.0"
+    "node": ">=4.0.0"
   },
   "bugs": {
     "url": "https://github.com/nemanjapetrovic/mongoose-morgan/issues",
