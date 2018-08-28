@@ -1,7 +1,7 @@
 {
   "name": "mongoose-morgan",
   "description": "Used to log morgan stream data into MongoDb database.",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "author": "Nemanja Petrovic <nemanjapetrovic1794@gmail.com>",
   "keywords": [
     "morgan",
