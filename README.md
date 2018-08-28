@@ -45,7 +45,14 @@ The example from the above will create inside `logs-db` database collection call
 
 [mongoose-morgan](https://www.npmjs.com/package/mongoose-morgan) is accepting three parameters:
 
-- mongoData : object type
+- mongoData : object type with next properties
+    - required {string} connectionString
+    >- optional {string} collection
+    >- optional {string} user
+    >- optional {string} pass
+    >- optional {bool} capped
+    >- optional {int} cappedSize
+    >- optional {int} cappedMax
 - options : object type - [standrad morgan options](https://github.com/expressjs/morgan#options)
 - format : string type - [standrad mrogan format](https://github.com/expressjs/morgan#predefined-formats)
 
