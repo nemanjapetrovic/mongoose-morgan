@@ -81,7 +81,11 @@ function MongooseMorgan(mongoData, options, format) {
         });
     }
 
-    return morgan(format, options);
+    var mongooseMorgan = morgan(format, options);
+	return mongooseMorgan;
 }
 
 module.exports = MongooseMorgan;
+module.exports.compile = morgan.compile
+module.exports.format = morgan.format
+module.exports.token = morgan.token
