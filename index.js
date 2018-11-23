@@ -40,6 +40,7 @@ function MongooseMorgan(mongoData, options, format) {
     mongoose.connect(mongoData.connectionString, {
         user: mongoData.user || null,
         pass: mongoData.pass || null,
+        dbName: mongoData.dbName || null,
         useNewUrlParser: true
     });
 
