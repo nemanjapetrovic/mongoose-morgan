@@ -4,6 +4,12 @@ const app = express();
 const mongooseMorgan = require('./../index');
 
 function MakeServer() {
+
+    // Logger
+    app.use(mongooseMorgan({
+        connectionString: 'mongodb://localhost:27017/MongooseMorganUnit'
+    }, {}, 'short'));
+
     app.get('/ok', (req, res) => {
         res.status(200);
         res.send('hello world');
@@ -13,11 +19,6 @@ function MakeServer() {
         res.status(500);
         res.send('error example');
     });
-
-    // Logger
-    app.use(mongooseMorgan({
-        connectionString: 'mongodb://localhost:27017/MongooseMorganUnit'
-    }, {}, 'short'));
 
     var server = app.listen(3000, () => {
         var port = server.address().port;

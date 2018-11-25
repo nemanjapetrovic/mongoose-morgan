@@ -2,7 +2,7 @@
   "name": "mongoose-morgan",
   "description": "Used to log morgan stream data into MongoDb database.",
   "version": "1.0.6",
-  "author": "Nemanja Petrovic <nemanjapetrovic1794@gmail.com>",
+  "author": "Nemanja Petrovic <nempet@protonmail.com>",
   "keywords": [
     "morgan",
     "log",
@@ -16,14 +16,14 @@
   "license": "MIT",
   "dependencies": {
     "carrier": "0.3.0",
-    "mongoose": "^5.2.10",
+    "mongoose": "^5.3.13",
     "morgan": "^1.9.1",
     "stream": "0.0.2"
   },
   "devDependencies": {
-    "express": "^4.16.3",
-    "supertest": "^3.1.0",
-    "chai": "^4.1.2",
+    "express": "^4.16.4",
+    "supertest": "^3.3.0",
+    "chai": "^4.2.0",
     "mocha": "^5.2.0"
   },
   "main": "index.js",
@@ -32,7 +32,7 @@
   },
   "bugs": {
     "url": "https://github.com/nemanjapetrovic/mongoose-morgan/issues",
-    "email": "nemanjapetrovic1794@gmail.com"
+    "email": "nempet@protonmail.com"
   },
   "repository": {
     "type": "git",

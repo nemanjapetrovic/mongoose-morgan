@@ -50,9 +50,10 @@ The example from the above will create inside `logs-db` database collection call
     >- optional {string} collection
     >- optional {string} user
     >- optional {string} pass
-    >- optional {bool} capped
-    >- optional {int} cappedSize
-    >- optional {int} cappedMax
+    >- optional {bool} capped ([pull req](https://github.com/nemanjapetrovic/mongoose-morgan/pull/2) by @Ni55aN)
+    >- optional {int} cappedSize ([pull req](https://github.com/nemanjapetrovic/mongoose-morgan/pull/2) by @Ni55aN)
+    >- optional {int} cappedMax ([pull req](https://github.com/nemanjapetrovic/mongoose-morgan/pull/2) by @Ni55aN)
+    >- optional {string} dbName ([pull req](https://github.com/nemanjapetrovic/mongoose-morgan/pull/5) by @pmstss)
 - options : object type - [standrad morgan options](https://github.com/expressjs/morgan#options)
 - format : string type - [standrad mrogan format](https://github.com/expressjs/morgan#predefined-formats)
 
