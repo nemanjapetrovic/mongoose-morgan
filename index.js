@@ -87,3 +87,6 @@ function MongooseMorgan(mongoData, options, format) {
 }
 
 module.exports = MongooseMorgan;
+module.exports.compile = morgan.compile;
+module.exports.format = morgan.format;
+module.exports.token = morgan.token;
