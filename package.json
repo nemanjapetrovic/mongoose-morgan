@@ -18,7 +18,8 @@
     "carrier": "0.3.0",
     "mongoose": "^5.3.13",
     "morgan": "^1.9.1",
-    "stream": "0.0.2"
+    "stream": "0.0.2",
+    "snyk": "^1.192.0"
   },
   "devDependencies": {
     "express": "^4.16.4",
@@ -40,6 +41,9 @@
   },
   "homepage": "https://github.com/nemanjapetrovic/mongoose-morgan/",
   "scripts": {
-    "test": "mocha --timeout 10000 test/*.test.js test/**/*.test.js"
-  }
+    "test": "mocha --timeout 10000 test/*.test.js test/**/*.test.js",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
