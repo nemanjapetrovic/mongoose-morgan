@@ -1,7 +1,7 @@
 {
   "name": "mongoose-morgan",
   "description": "Used to log morgan stream data into MongoDb database.",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "author": "Nemanja Petrovic <nempet@protonmail.com>",
   "keywords": [
     "morgan",
@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "carrier": "0.3.0",
-    "mongoose": "^5.6.9",
+    "mongoose": "^5.7.1",
     "morgan": "^1.9.1",
     "stream": "0.0.2"
   },

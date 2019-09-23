@@ -41,7 +41,8 @@ function MongooseMorgan(mongoData, options, format) {
         user: mongoData.user || null,
         pass: mongoData.pass || null,
         dbName: mongoData.dbName || null,
-        useNewUrlParser: true
+        useNewUrlParser: mongoData.useNewUrlParser || true,
+        useUnifiedTopology: mongoData.useUnifiedTopology || true
     });
 
     // Create stream to read from

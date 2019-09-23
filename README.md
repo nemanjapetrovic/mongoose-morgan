@@ -54,14 +54,16 @@ The example from the above will create inside `logs-db` database collection call
     >- optional {int} cappedSize ([pull req](https://github.com/nemanjapetrovic/mongoose-morgan/pull/2) by @Ni55aN)
     >- optional {int} cappedMax ([pull req](https://github.com/nemanjapetrovic/mongoose-morgan/pull/2) by @Ni55aN)
     >- optional {string} dbName ([pull req](https://github.com/nemanjapetrovic/mongoose-morgan/pull/5) by @pmstss)
+    >- optional {bool} useNewUrlParser (default: true)
+    >- optional {bool} useUnifiedTopology (default: true) ([issue #8](https://github.com/nemanjapetrovic/mongoose-morgan/issues/8))
 - options : object type - [standrad morgan options](https://github.com/expressjs/morgan#options)
 - format : string type - [standrad mrogan format](https://github.com/expressjs/morgan#predefined-formats)
 
 Example without morgan options:
 
 ```
-app.use(morgan({    
-    connectionString: 'mongodb://localhost:27017/logs-db' 
+app.use(morgan({
+    connectionString: 'mongodb://localhost:27017/logs-db'
    }, {}, 'short'
 ));
 ```
