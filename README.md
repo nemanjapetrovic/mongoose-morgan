@@ -88,7 +88,7 @@ app.use(morgan({
 
 The code above will log only data in `dev` format and will skip all the logs if the response status code is less than 400. Data will be stored in `logs-db` database in `error_logger` collection.
 
-# [Contribution](https://github.com/nemanjapetrovic/dev-env-setup/blob/master/CONTRIBUTING.md)
+# [Contribution](https://github.com/nemanjapetrovic/mongoose-morgan/blob/master/CONTRIBUTING.md)
 
 Feel free to contribute by forking this repository, making some changes, and submitting pull requests. For any questions or advice place an issue on this repository.
 
