@@ -4,4 +4,4 @@
  * @param  {object} options - represents morgan options, check their github, default value is empty object {}.
  * @param  {string} format - represents morgan formatting, check their github, default value is 'combined'.
  */
-export declare function MongooseMorgan(mongoData: object, options: object, format: string): object
+export declare function MongooseMorgan(mongoData: any, options: any, format: string): any
