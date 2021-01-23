@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm/mongoose-morgan.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/mongoose-morgan/)
 
-Is an npm package which is combining [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages by adding an additional functionality to log morgan data into MongoDB.
+Is npm package which is combining [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages by adding an additional functionality to log morgan data into MongoDB database.
 
 # Install
 
@@ -86,11 +86,11 @@ app.use(morgan({
 ));
 ```
 
-The code above will log only data in `dev` format and will skip all the logs if the response status code is less than 400. Data will be stored in `logs-db` database in `error_logger` collection.
+The code above will log data in `dev` format and will skip logging if the response status code is less than 400. Data will be stored in `logs-db` database in `error_logger` collection.
 
 # [Contribution](https://github.com/nemanjapetrovic/mongoose-morgan/blob/master/CONTRIBUTING.md)
 
-Feel free to contribute by forking this repository, making some changes, and submitting pull requests. For any questions or advice place an issue on this repository.
+Feel free to contribute by forking this repository, making changes, and submitting pull requests. For any questions or advice place an issue on this repository.
 
 # License
 
