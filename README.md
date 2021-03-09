@@ -6,7 +6,7 @@
 
 [![NPM](https://nodei.co/npm/mongoose-morgan.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/mongoose-morgan/)
 
-Is npm package which is combining [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages by adding an additional functionality to log morgan data into MongoDB database.
+Is npm package which combines [mongoose](https://www.npmjs.com/package/mongoose) and [morgan](https://www.npmjs.com/package/morgan) packages by adding additional functionality to log morgan data into a MongoDB database.
 
 # Install
 
@@ -43,7 +43,7 @@ The example from the above will create inside `logs-db` database collection call
 
 # Detailed usage
 
-[mongoose-morgan](https://www.npmjs.com/package/mongoose-morgan) is accepting three parameters:
+[mongoose-morgan](https://www.npmjs.com/package/mongoose-morgan) accepts three parameters:
 
 - mongoData : object type with next properties
     - required {string} connectionString
@@ -56,8 +56,8 @@ The example from the above will create inside `logs-db` database collection call
     >- optional {string} dbName ([pull req](https://github.com/nemanjapetrovic/mongoose-morgan/pull/5) by @pmstss)
     >- optional {bool} useNewUrlParser (default: true)
     >- optional {bool} useUnifiedTopology (default: true) ([issue #8](https://github.com/nemanjapetrovic/mongoose-morgan/issues/8))
-- options : object type - [standrad morgan options](https://github.com/expressjs/morgan#options)
-- format : string type - [standrad mrogan format](https://github.com/expressjs/morgan#predefined-formats)
+- options : object type - [standard morgan options](https://github.com/expressjs/morgan#options)
+- format : string type - [standard morgan format](https://github.com/expressjs/morgan#predefined-formats)
 
 Example without morgan options:
 
@@ -90,7 +90,7 @@ The code above will log data in `dev` format and will skip logging if the respon
 
 # [Contribution](https://github.com/nemanjapetrovic/mongoose-morgan/blob/master/CONTRIBUTING.md)
 
-Feel free to contribute by forking this repository, making changes, and submitting pull requests. For any questions or advice place an issue on this repository.
+Feel free to contribute by forking this repository, making changes, and submitting pull requests. For any questions or advice create an issue in this repository.
 
 # License
 
