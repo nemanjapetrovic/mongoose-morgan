@@ -30,7 +30,7 @@ var morgan = require('mongoose-morgan');
 var port = process.env.port || 8080;
 
 // Logger
-app.use(morgan({
+app.use(morgan("combined", {
     connectionString: 'mongodb://localhost:27017/logs-db'
 }));
 
@@ -62,7 +62,8 @@ The example from the above will create inside `logs-db` database collection call
 Example without morgan options:
 
 ```
-app.use(morgan({
+app.use(morgan("combined",
+   {
     connectionString: 'mongodb://localhost:27017/logs-db'
    }, {}, 'short'
 ));
@@ -71,7 +72,8 @@ app.use(morgan({
 Full example:
 
 ```
-app.use(morgan({
+app.use(morgan("combined",
+   {
     collection: 'error_logger',
     connectionString: 'mongodb://localhost:27017/logs-db',
     user: 'admin',
