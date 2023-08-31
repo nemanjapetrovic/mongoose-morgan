@@ -16,7 +16,7 @@
   "license": "MIT",
   "dependencies": {
     "carrier": "0.3.0",
-    "mongoose": "^5.11.13",
+    "mongoose": "^5.13.3",
     "morgan": "^1.10.0",
     "stream": "0.0.2"
   },
